@@ -33,17 +33,17 @@ function addToList (text: string, action? : string )
   })
   list.appendChild(li)
   if(action === "add"){
-    saveToLocalStoare(text, 'add')
+    saveToLocalStorage(text, 'add')
   }
 }
 
 function removeItem (item: HTMLLIElement)
 {
   item.remove()
-  saveToLocalStoare(item.innerText, 'remove')
+  saveToLocalStorage(item.innerText, 'remove')
 }
 
-function saveToLocalStoare(text : string, action : string) 
+function saveToLocalStorage(text : string, action : string) 
 {
   if (action === 'remove') {
     todos = todos.filter((todo) => {
