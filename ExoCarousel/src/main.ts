@@ -1,7 +1,10 @@
-import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
+import Glide from '@glidejs/glide'
 
-new Glide(".glide").mount({ Controls, Breakpoints })
+const glide = new Glide('.multi', {
+    type: 'carousel',
+    autoplay: 3500,
+    perView: 3
+  })
 
-export {
+glide.mount()
 
-}
