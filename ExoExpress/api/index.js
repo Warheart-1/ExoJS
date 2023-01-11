@@ -2,8 +2,10 @@ import express from 'express';
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('hello world');
+app.use('/public', express.static('public'));
+
+app.get('/accueil', (req, res) => {
+    
 });
 
 app.listen(3000, () => {
